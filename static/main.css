@@ -37,7 +37,7 @@ body {
   }
   
   a.article-title:hover {
-    color: #428bca;
+    color: rgb(175, 66, 202);
     text-decoration: none;
   }
   
