@@ -2,3 +2,5 @@ virtual/
 *.pyc
 __pychache__/
 .vscode/
+instance/
+
