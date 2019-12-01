@@ -6,16 +6,16 @@ app.config['SECRET_KEY'] = '3ac785fa197b6e2016b4086002a7dd20'
 
 posts = [
     {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
+        'author': 'Jane nyambura',
+        'title': ' Blog ',
+        'content': 'I love blogging',
+        'date_posted': 'December 20, 2019'
     },
     {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
+        'author': 'Kimberly princess',
+        'title': 'Blog ',
+        'content': 'life is amazing and great',
+        'date_posted': 'December 21, 2019'
     }
 ]
 
@@ -44,7 +44,7 @@ def register():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        if form.email.data == 'admin@blog.com' and form.password.data == 'password':
+        if form.email.data == 'mary@gmail.com' and form.password.data == 'password':
             flash('You have been logged in!', 'success')
             return redirect(url_for('home'))
         else:
