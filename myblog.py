@@ -1,8 +1,17 @@
+from datetime import datetime
 from flask import Flask, render_template, url_for, flash, redirect
+from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm, LoginForm
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '3ac785fa197b6e2016b4086002a7dd20'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+db = SQLAlchemy(app)
+
+
+
 
 posts = [
     {
