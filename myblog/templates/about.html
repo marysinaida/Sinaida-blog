@@ -1,10 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>About Page</h1>
-    <p>My personal blogging website,is a site where you can create and share your opinions and other users can read and comment on them.<br>and also has random quotes to inspire my users. </p>
+    <p>My personal blogging website,is a site where you can create and share your opinions and other users can read and comment on them.and also has random quotes to inspire my users. </p>
     <div>
         <p>{{quote.quote}}</p>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>QUOTES:</h1>
+                <div class="card" id="log">
+                    <p class="card-title"><strong>Inspirational Quote</p>
+                    <p class="card-body">{{quote}}</p>
+                    <p class="card-body">{{author}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
+
 
 

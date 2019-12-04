@@ -1,4 +1,5 @@
 from myblog import create_app
+from myblog.models import *
 
 app = create_app()
 

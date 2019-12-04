@@ -1,14 +1,11 @@
-# import urllib.request
-# import json
-# from .user import Quote
+import urllib, json
 
-# base_url = None
+base_url = None
 
-
-# def get_quote():
-#     url="http://quotes.stormconsultancy.co.uk/random.json (Links to an external site.)"
-#     res = requests.get(url)
-#     res_json = res.json()
-#     print(res_json)
-
-#     return res_json
+def get_quote():
+    url="http://quotes.stormconsultancy.co.uk/random.json"
+    with urllib.request.urlopen(url) as url:
+        res_json = url.read()
+        response = json.loads(res_json)
+    
+        return response

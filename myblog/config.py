@@ -2,10 +2,28 @@ import os
 
 
 class Config:
-    SECRET_KEY = '5791628bb0b13ce0c676dfde280ba245'
+    '''
+    General configuration class
+    '''
+    SECRET_KEY='snydmary'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
-    MAIL_SERVER = 'smtp.googlemail.com'
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get('EMAIL_USER')
-    MAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/test'
+    QUOTES_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
+class ProdConfig(Config):
+    '''
+    Production configuration class
+    '''
+    
+    pass
+class DevConfig(Config):
+    '''
+    Development configuration class
+    '''
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
+    DEBUG = True
+config_options = {
+    'production': ProdConfig,
+    'development':DevConfig
+}
+   

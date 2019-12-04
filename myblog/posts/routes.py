@@ -5,6 +5,7 @@ from myblog import db
 from myblog.models import Post
 from myblog.posts.forms import PostForm
 
+
 posts = Blueprint('posts', __name__)
 
 
